@@ -13,7 +13,14 @@ const Main = () => {
           <Story id={el.id} url={el.url} />
         ))}
       </StoryWrapper>
-      <MainPost />
+      {data.post.map((el) => (
+        <MainPost
+          id={el.id}
+          profImg={el.profImg}
+          postImg={el.postImg}
+          content={el.content}
+        />
+      ))}
     </Wrapper>
   );
 };
@@ -21,7 +28,10 @@ export default Main;
 
 const Wrapper = styled.div`
   height: 100%;
-  //   background-color: orange;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 const StoryWrapper = styled.div`
   display: flex;

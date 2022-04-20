@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "@emotion/styled";
 import RoundProfile from "../atoms/RoundProfile";
-const MainPost = () => {
+const MainPost = ({ id, profImg, postImg, content }) => {
   return (
     <Wrapper>
       <PostHeaderWrapper>
-        <RoundProfile w={"32px"} h={"32px"} url={"/assets/Profile6.jpeg"} />
-        <div>아이디</div>
+        <RoundProfile w={"32px"} h={"32px"} url={profImg} />
+        <div>{id}</div>
       </PostHeaderWrapper>
-      <PostImg src={"/assets/Post5.jpeg"} />
+      <PostImg src={postImg} />
+      <div>{content}</div>
     </Wrapper>
   );
 };
