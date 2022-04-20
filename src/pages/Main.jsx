@@ -8,12 +8,21 @@ const Main = () => {
   return (
     <Wrapper>
       <Header />
-      <StoryWrapper>
-        {data.story.map((el) => (
-          <Story id={el.id} url={el.url} />
+      <ContentWrapper>
+        <StoryWrapper>
+          {data.story.map((el) => (
+            <Story id={el.id} url={el.url} />
+          ))}
+        </StoryWrapper>
+        {data.post.map((el) => (
+          <MainPost
+            id={el.id}
+            profImg={el.profImg}
+            postImg={el.postImg}
+            content={el.content}
+          />
         ))}
-      </StoryWrapper>
-      <MainPost />
+      </ContentWrapper>
     </Wrapper>
   );
 };
@@ -21,8 +30,18 @@ export default Main;
 
 const Wrapper = styled.div`
   height: 100%;
-  //   background-color: orange;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const ContentWrapper = styled.div`
+  padding: 30px 0;
 `;
 const StoryWrapper = styled.div`
   display: flex;
+  margin-bottom: 24px;
+  background-color: white;
+  border: 0.5px solid rgba(239, 239, 239, 1);
+  padding: 16px 10px;
 `;

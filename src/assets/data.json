@@ -6,5 +6,25 @@
     },
     { "id": "id2", "url": "/assets/Profile2.jpeg" },
     { "id": "id3", "url": "/assets/Profile3.png" }
+  ],
+  "post": [
+    {
+      "id": "id1",
+      "profImg": "/assets/Profile4.jpeg",
+      "postImg": "/assets/Post1.jpeg",
+      "content": "어쩌구저쩌구"
+    },
+    {
+      "id": "id4",
+      "profImg": "/assets/Profile5.jpeg",
+      "postImg": "/assets/Post2.jpeg",
+      "content": "어쩌구저쩌구"
+    },
+    {
+      "id": "id6",
+      "profImg": "/assets/Profile6.jpeg",
+      "postImg": "/assets/Post3.jpeg",
+      "content": "어쩌구저쩌구"
+    }
   ]
 }
