@@ -1,0 +1,10 @@
+{
+  "story": [
+    {
+      "id": "id1",
+      "url": "/assets/Profile1.jpeg"
+    },
+    { "id": "id2", "url": "/assets/Profile2.jpeg" },
+    { "id": "id3", "url": "/assets/Profile3.png" }
+  ]
+}
