@@ -5,26 +5,39 @@
       "url": "/assets/Profile1.jpeg"
     },
     { "id": "id2", "url": "/assets/Profile2.jpeg" },
-    { "id": "id3", "url": "/assets/Profile3.png" }
+    { "id": "id3", "url": "/assets/Profile3.png" },
+    { "id": "id2", "url": "/assets/Profile2.jpeg" },
+    { "id": "id2", "url": "/assets/Profile2.jpeg" },
+    { "id": "id2", "url": "/assets/Profile2.jpeg" },
+    { "id": "id2", "url": "/assets/Profile2.jpeg" },
+    { "id": "id2", "url": "/assets/Profile2.jpeg" },
+    { "id": "id2", "url": "/assets/Profile2.jpeg" },
+    { "id": "id2", "url": "/assets/Profile2.jpeg" }
   ],
   "post": [
     {
       "id": "id1",
       "profImg": "/assets/Profile4.jpeg",
       "postImg": "/assets/Post1.jpeg",
-      "content": "어쩌구저쩌구"
+      "content": "어쩌구저쩌구",
+      "like": 33,
+      "commentNum": 49
     },
     {
       "id": "id4",
       "profImg": "/assets/Profile5.jpeg",
       "postImg": "/assets/Post2.jpeg",
-      "content": "어쩌구저쩌구"
+      "content": "어쩌구저쩌구",
+      "like": 33,
+      "commentNum": 49
     },
     {
       "id": "id6",
       "profImg": "/assets/Profile6.jpeg",
       "postImg": "/assets/Post3.jpeg",
-      "content": "어쩌구저쩌구"
+      "content": "어쩌구저쩌구",
+      "like": 33,
+      "commentNum": 49
     }
   ]
 }
