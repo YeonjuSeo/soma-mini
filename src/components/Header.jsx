@@ -14,21 +14,11 @@ const Header = () => {
         <Logo>Somagram</Logo>
         <StyledInput placeholder={"검색"} />
         <FuncsWrapper>
-          <MdHomeFilled
-            style={{ width: "24px", height: "24px", marginRight: "14px" }}
-          />
-          <HiOutlinePaperAirplane
-            style={{ width: "24px", height: "24px", marginRight: "14px" }}
-          />
-          <FiPlusSquare
-            style={{ width: "24px", height: "24px", marginRight: "14px" }}
-          />
-          <ImCompass2
-            style={{ width: "24px", height: "24px", marginRight: "14px" }}
-          />
-          <HiOutlineHeart
-            style={{ width: "24px", height: "24px", marginRight: "14px" }}
-          />
+          <MdHomeFilled style={IconStyle} />
+          <HiOutlinePaperAirplane style={IconStyle} />
+          <FiPlusSquare style={IconStyle} />
+          <ImCompass2 style={IconStyle} />
+          <HiOutlineHeart style={IconStyle} />
           <RoundProfile
             alt={"Profile Img - Yawning Cat"}
             w={"24px"}
@@ -59,6 +49,7 @@ const StyledInput = styled.input`
   border-radius: 8px;
   padding: 0 16px;
   width: 228px;
+  line-height: 36px;
 `;
 const ElementsWrapper = styled.div`
   max-width: 975px;
@@ -66,5 +57,11 @@ const ElementsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  align-items: center;
 `;
 const FuncsWrapper = styled.div``;
+const IconStyle = {
+  width: "24px",
+  height: "24px",
+  marginRight: "14px",
+};

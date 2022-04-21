@@ -2,8 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import Header from "../components/Header";
 import Story from "../components/Story";
-import data from "../assets/data.json";
 import MainPost from "../organisms/MainPost";
+import data from "../assets/data.json";
 const Main = () => {
   return (
     <Wrapper>
@@ -20,6 +20,8 @@ const Main = () => {
             profImg={el.profImg}
             postImg={el.postImg}
             content={el.content}
+            like={el.like}
+            commentNum={el.commentNum}
           />
         ))}
       </ContentWrapper>
@@ -37,6 +39,7 @@ const Wrapper = styled.div`
 `;
 const ContentWrapper = styled.div`
   padding: 30px 0;
+  max-width: 614px;
 `;
 const StoryWrapper = styled.div`
   display: flex;
