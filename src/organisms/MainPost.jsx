@@ -92,7 +92,9 @@ const MainPost = ({ id, profImg, postImg, content, like, commentNum }) => {
           </StrongContentTxt>
           {content}
         </ContentWrapper>
-        <div style={{ color: "#828282" }}>댓글 {commentNum}개 모두 보기</div>
+        <div style={{ color: "#828282", cursor: "grab" }}>
+          댓글 {commentNum}개 모두 보기
+        </div>
       </BottomWrapper>
       <ReplyWrapper>
         <BsEmojiSmile style={IconStyle} />
@@ -106,7 +108,7 @@ export default MainPost;
 
 const Wrapper = styled.div`
   background-color: white;
-  border: 0.5px solid rgba(239, 239, 239, 1);
+  border: 1px solid rgba(239, 239, 239, 1);
   margin-bottom: 24px;
 `;
 const PostHeaderWrapper = styled.div`
@@ -135,6 +137,7 @@ const IconStyle = {
   width: "24px",
   height: "24px",
   marginRight: "8px",
+  cursor: "grab",
 };
 const BottomWrapper = styled.div`
   padding: 6px 16px 16px 16px;
