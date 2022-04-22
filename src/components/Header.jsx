@@ -64,4 +64,5 @@ const IconStyle = {
   width: "24px",
   height: "24px",
   marginRight: "14px",
+  cursor: "grab",
 };
