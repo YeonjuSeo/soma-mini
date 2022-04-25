@@ -85,7 +85,7 @@ const MainPost = ({ id, profImg, postImg, content, like, commentNum }) => {
           {RenderHeartBubbleMsg()}
           {RenderBookMark()}
         </IconsWrapper>
-        <StrongContentTxt>좋아요 {like}개</StrongContentTxt>
+        <StrongContentTxt>좋아요 {heart ? like + 1 : like}개</StrongContentTxt>
         <ContentWrapper>
           <StrongContentTxt style={{ marginRight: "4px" }}>
             {id}
