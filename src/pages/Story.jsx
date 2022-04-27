@@ -10,22 +10,25 @@ import {
 
 import RoundProfile from "../atoms/RoundProfile";
 import StoryHeader from "../components/StoryHeader";
+import StoryMiniPost from "../organisms/StoryMiniPost";
 
 const Story = () => {
   return (
     <Wrapper>
       <StoryHeader />
       <ContentWrapper>
-        <MiniProfile>
-          <RoundProfile url={"/assets/Story/StoryProfile1.png"} w={"56px"} h={"56px"} />
-          <StoryHeaderProfileFont>Profile1</StoryHeaderProfileFont>
-          <StoryHeaderProfileFont>21시간</StoryHeaderProfileFont>
-        </MiniProfile>
-        <MiniProfile>
-          <RoundProfile url={"/assets/Story/StoryProfile1.png"} w={"56px"} h={"56px"} />
-          <StoryHeaderProfileFont>Profile1</StoryHeaderProfileFont>
-          <StoryHeaderProfileFont>21시간</StoryHeaderProfileFont>
-        </MiniProfile>
+        <StoryMiniPost
+          id = {null}
+          profImg = {null}
+          miniPostImg = {null}
+          time = {null}
+        />
+        <StoryMiniPost
+          id = "Profile1"
+          profImg = "/assets/Story/StoryProfile1.png"
+          miniPostImg = "/assets/Story/StoryMiniPost1.jpg"
+          time = "20시간"
+        />
 
         <StoryPostWrapper>
           <AiFillLeftCircle style={IconStyle2} />
@@ -34,7 +37,7 @@ const Story = () => {
               <StoryHeaderProfileWrapper>
                 <RoundProfile url={"/assets/Story/StoryProfile2.png"} w={"32px"} h={"32px"} />
                 <StoryHeaderProfileFont>Profile2</StoryHeaderProfileFont>
-                <StoryHeaderProfileFont>22시간</StoryHeaderProfileFont>
+                <StoryHeaderProfileFont>21시간</StoryHeaderProfileFont>
               </StoryHeaderProfileWrapper>
               <div>
                 <IoPause style={IconStyle3} />
@@ -52,11 +55,18 @@ const Story = () => {
           <AiFillRightCircle style={IconStyle2} />
         </StoryPostWrapper>
 
-        <MiniProfile>
-          <RoundProfile url={"/assets/Story/StoryProfile3.png"} w={"56px"} h={"56px"} />
-          <StoryHeaderProfileFont>Profile3</StoryHeaderProfileFont>
-          <StoryHeaderProfileFont>23시간</StoryHeaderProfileFont>
-        </MiniProfile>
+        <StoryMiniPost
+          id = "Profile3"
+          profImg = "/assets/Story/StoryProfile3.png"
+          miniPostImg = "/assets/Story/StoryMiniPost3.jpg"
+          time = "22시간"
+        />
+        <StoryMiniPost
+          id = "Profile4"
+          profImg = "/assets/Story/StoryProfile4.png"
+          miniPostImg = "/assets/Story/StoryMiniPost4.jpg"
+          time = "23시간"
+        />
       </ContentWrapper>
     </Wrapper>
   );
@@ -75,22 +85,6 @@ const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-const MiniProfile = styled.div`
-  height: 336px;
-  width: 189px;
-  border-radius: 10px;
-  background-image: url("/assets/Story/StoryIdlePost1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0px 30px;
-  flex: 0 0 auto;
 `;
 const StoryPostWrapper = styled.div`
   height: 800px;
