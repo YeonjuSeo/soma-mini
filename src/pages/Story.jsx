@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { MdClose } from "react-icons/md";
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import { IoPlay, IoPause, IoVolumeMedium, IoVolumeMute, IoEllipsisHorizontal } from "react-icons/io5";
 import {
@@ -10,14 +9,12 @@ import {
 } from "react-icons/hi";
 
 import RoundProfile from "../atoms/RoundProfile";
+import StoryHeader from "../components/StoryHeader";
 
 const Story = () => {
   return (
     <Wrapper>
-      <HeaderWrapper>
-        <Logo>Somagram</Logo>
-        <MdClose style={IconStyle} />
-      </HeaderWrapper>
+      <StoryHeader />
       <ContentWrapper>
         <MiniProfile>
           <RoundProfile url={"/assets/Story/StoryProfile1.png"} w={"56px"} h={"56px"} />
@@ -70,24 +67,6 @@ const Wrapper = styled.div`
   height: 100vh;
   background-color: #1A1A1A;
 `;
-const HeaderWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 16px;
-  align-items: center;
-`;
-const Logo = styled.div`
-  font-weight: bold;
-  color: white;
-`;
-const IconStyle = {
-  width: "40px",
-  height: "40px",
-  marginRight: "32px",
-  cursor: "grab",
-  color: "white"
-};
 
 const ContentWrapper = styled.div`
   padding: 30px 0;
