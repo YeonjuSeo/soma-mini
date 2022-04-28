@@ -7,7 +7,7 @@ import { FiPlusSquare } from "react-icons/fi";
 import { ImCompass2 } from "react-icons/im";
 import ProfileImg from "../assets/Profile.jpeg";
 import RoundProfile from "../atoms/RoundProfile";
-const Header = () => {
+const Header = ({ setModalOn }) => {
   return (
     <Wrapper>
       <ElementsWrapper>
@@ -16,7 +16,12 @@ const Header = () => {
         <FuncsWrapper>
           <MdHomeFilled style={IconStyle} />
           <HiOutlinePaperAirplane style={IconStyle} />
-          <FiPlusSquare style={IconStyle} />
+          <FiPlusSquare
+            style={IconStyle}
+            onClick={() => {
+              setModalOn(true);
+            }}
+          />
           <ImCompass2 style={IconStyle} />
           <HiOutlineHeart style={IconStyle} />
           <RoundProfile
