@@ -1,11 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 
 import { IoPlay, IoPause, IoVolumeMedium, IoVolumeMute, IoEllipsisHorizontal } from "react-icons/io5";
 
 import RoundProfile from "../atoms/RoundProfile";
 
-const StoryPostHeader = ({ id, profImg, time }) => {
+const StoryPostHeader = ({ id, profImg, time, videoControls }) => {
+  const [play, setPlay] = useState(false);
+  const [mute, setMute] = useState(false);
+
+  const RenderPlay = () => {
+    if (play) {
+      return (
+        <IoPlay
+          style={IconStyle}
+          onClick={() => {
+            videoControls.play();
+            setPlay(!play);
+          }}
+        />
+      );
+    }
+    else {
+      return (
+        <IoPause
+          style={IconStyle}
+          onClick={() => {
+            videoControls.pause();
+            setPlay(!play);
+          }}
+        />
+      )
+    }
+  };
+  const RenderMute = () => {
+    if (mute) {
+      return (
+        <IoVolumeMute
+          style={IconStyle}
+          onClick={() => {
+            videoControls.unmute();
+            setMute(!mute);
+          }}
+        />
+      );
+    }
+    else {
+      return (
+        <IoVolumeMedium
+          style={IconStyle}
+          onClick={() => {
+            videoControls.mute();
+            setMute(!mute);
+          }}
+        />
+      )
+    }
+  };
+
   return (
     <Wrapper>
       <ProfileWrapper>
@@ -14,8 +66,8 @@ const StoryPostHeader = ({ id, profImg, time }) => {
         <TimeFont>{time}</TimeFont>
       </ProfileWrapper>
       <div>
-        <IoPause style={IconStyle} />
-        <IoVolumeMedium style={IconStyle} />
+        {RenderPlay()}
+        {RenderMute()}
         <IoEllipsisHorizontal style={IconStyle} />
       </div>
     </Wrapper>

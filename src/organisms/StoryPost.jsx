@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "@emotion/styled";
 
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
@@ -7,11 +7,26 @@ import StoryPostHeader from "../components/StoryPostHeader";
 import StoryPostFooter from "../components/StoryPostFooter";
 
 const StoryPost = ({ id, profImg, postImg, time }) => {
+  const vidRef = useRef(null);
+
+  const playVideo = () => {
+    vidRef.current.play();
+  }
+  const pauseVideo = () => {
+    vidRef.current.pause();
+  }
+  const muteVideo = () => {
+    vidRef.current.muted = true;
+  }
+  const unmuteVideo = () => {
+    vidRef.current.muted = false;
+  }
+
   return (
     <Wrapper>
       <AiFillLeftCircle style={IconStyle} />
       <PostWrapper>
-        <video height="800px" width="450px" autoplay="" style={PostVideoStyle}>
+        <video ref={vidRef} height="800px" width="450px" autoPlay={true} style={PostVideoStyle}>
           <source src={postImg} type="video/mp4" />
         </video>
         <PostControlWrapper>
@@ -19,6 +34,12 @@ const StoryPost = ({ id, profImg, postImg, time }) => {
             id = {id}
             profImg = {profImg}
             time = {time}
+            videoControls = {{
+              play: playVideo,
+              pause: pauseVideo,
+              mute: muteVideo,
+              unmute: unmuteVideo
+            }}
           />
           <StoryPostFooter
             id = {id}
@@ -53,10 +74,10 @@ const PostWrapper = styled.div`
   position: relative;
 `;
 const PostVideoStyle = {
-  "border-radius": "10px",
+  borderRadius: "10px",
   position: "relative",
-  "z-index": 0,
-  "object-fit": "cover"
+  zIndex: 0,
+  objectFit: "cover"
 };
 const PostControlWrapper = styled.div`
   height: 800px;
