@@ -35,7 +35,7 @@ const Profile = () => {
                     
                     
                     <ContentWrapper>
-                        <span>게시물 0</span>
+                        <span>게시물 8</span>
                         <span>팔로워 0</span>
                         <span>팔로우 0</span>
                     </ContentWrapper>
@@ -50,7 +50,7 @@ const Profile = () => {
                         <span><FaBorderAll/>게시물</span>
             </ContentWrapper>
             <GridWrapper>
-                {data.story.map((el) => (
+                {data.profile.map((el) => (
                     <img src={el.url} width="150px" height="150"/>
                 ))}
             </GridWrapper>
