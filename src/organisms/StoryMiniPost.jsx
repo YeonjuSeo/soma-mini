@@ -55,4 +55,6 @@ const TimeFont = styled.div`
 const EmptyWrapper = styled.div`
   height: 336px;
   width: 189px;
+  margin: 0px 30px;
+  flex: 0 0 auto;
 `;

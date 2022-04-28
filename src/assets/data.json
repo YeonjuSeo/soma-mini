@@ -39,5 +39,35 @@
       "like": 33,
       "commentNum": 49
     }
+  ],
+  "storyPost": [
+    {
+      "id": "id1",
+      "profImg": "/assets/Story/StoryProfile1.png",
+      "miniPostImg": "/assets/Story/StoryMiniPost1.jpg",
+      "postImg": "/assets/Story/StoryPost1.mp4",
+      "time": "20시간"
+    },
+    {
+      "id": "id2",
+      "profImg": "/assets/Story/StoryProfile2.png",
+      "miniPostImg": "/assets/Story/StoryMiniPost2.jpg",
+      "postImg": "/assets/Story/StoryPost2.mp4",
+      "time": "21시간"
+    },
+    {
+      "id": "id3",
+      "profImg": "/assets/Story/StoryProfile3.png",
+      "miniPostImg": "/assets/Story/StoryMiniPost3.jpg",
+      "postImg": "/assets/Story/StoryPost3.mp4",
+      "time": "22시간"
+    },
+    {
+      "id": "id4",
+      "profImg": "/assets/Story/StoryProfile4.png",
+      "miniPostImg": "/assets/Story/StoryMiniPost4.jpg",
+      "postImg": "/assets/Story/StoryPost4.mp4",
+      "time": "23시간"
+    }
   ]
 }
