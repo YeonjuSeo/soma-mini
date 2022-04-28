@@ -1,22 +1,29 @@
 {
   "story": [
     {
-      "id": "id1",
-      "url": "/assets/Profile1.jpeg"
+      "id": "byuk_mm",
+      "url": "/assets/animal_profile7.jpeg"
     },
-    { "id": "id2", "url": "/assets/Profile2.jpeg" },
-    { "id": "id3", "url": "/assets/Profile3.png" },
-    { "id": "id2", "url": "/assets/Profile2.jpeg" },
-    { "id": "id2", "url": "/assets/Profile2.jpeg" },
-    { "id": "id2", "url": "/assets/Profile2.jpeg" },
-    { "id": "id2", "url": "/assets/Profile2.jpeg" },
-    { "id": "id2", "url": "/assets/Profile2.jpeg" },
-    { "id": "id2", "url": "/assets/Profile2.jpeg" },
-    { "id": "id2", "url": "/assets/Profile2.jpeg" }
+    { "id": "yeonjuice_2000", "url": "/assets/animal_profile1.jpeg" },
+    { "id": "lovely_yeon", "url": "/assets/animal_profile2.jpeg" },
+    { "id": "jaewon_1011", "url": "/assets/animal_profile3.jpeg" },
+    { "id": "dong_love_offcial", "url": "/assets/animal_profile4.jpeg" },
+    { "id": "catt_cutee", "url": "/assets/animal_profile5.jpeg" },
+    { "id": "nayun_kk", "url": "/assets/animal_profile6.jpeg" }
+  ],
+  "profile": [
+    { "id": "lovely_yeon", "url": "/assets/dog_1.jpg" },
+    { "id": "yeonjuice_2000", "url": "/assets/dog_2.jpg" },
+    { "id": "byuk_mm", "url": "/assets/dog_3.jpg" },
+    { "id": "nayun_kk", "url": "/assets/dog_4.jpg" },
+    { "id": "catt_cutee", "url": "/assets/cat_1.jpg" },
+    { "id": "dong_love_officail", "url": "/assets/cat_2.jpg" },
+    { "id": "keesom_151", "url": "/assets/cat_3.jpg" },
+    { "id": "lion-lover", "url": "/assets/turtle_1.jpg" }
   ],
   "post": [
     {
-      "id": "id1",
+      "id": "catt_cutee",
       "profImg": "/assets/Profile4.jpeg",
       "postImg": "/assets/Post1.jpeg",
       "content": "어쩌구저쩌구",
@@ -24,50 +31,20 @@
       "commentNum": 49
     },
     {
-      "id": "id4",
+      "id": "ohoio_km",
       "profImg": "/assets/Profile5.jpeg",
       "postImg": "/assets/Post2.jpeg",
-      "content": "어쩌구저쩌구",
-      "like": 33,
+      "content": "내가 좋아하는 놈!!",
+      "like": 343,
       "commentNum": 49
     },
     {
-      "id": "id6",
+      "id": "jaewook_11",
       "profImg": "/assets/Profile6.jpeg",
       "postImg": "/assets/Post3.jpeg",
       "content": "어쩌구저쩌구",
       "like": 33,
       "commentNum": 49
-    }
-  ],
-  "storyPost": [
-    {
-      "id": "id1",
-      "profImg": "/assets/Story/StoryProfile1.png",
-      "miniPostImg": "/assets/Story/StoryMiniPost1.jpg",
-      "postImg": "/assets/Story/StoryPost1.mp4",
-      "time": "20시간"
-    },
-    {
-      "id": "id2",
-      "profImg": "/assets/Story/StoryProfile2.png",
-      "miniPostImg": "/assets/Story/StoryMiniPost2.jpg",
-      "postImg": "/assets/Story/StoryPost2.mp4",
-      "time": "21시간"
-    },
-    {
-      "id": "id3",
-      "profImg": "/assets/Story/StoryProfile3.png",
-      "miniPostImg": "/assets/Story/StoryMiniPost3.jpg",
-      "postImg": "/assets/Story/StoryPost3.mp4",
-      "time": "22시간"
-    },
-    {
-      "id": "id4",
-      "profImg": "/assets/Story/StoryProfile4.png",
-      "miniPostImg": "/assets/Story/StoryMiniPost4.jpg",
-      "postImg": "/assets/Story/StoryPost4.mp4",
-      "time": "23시간"
     }
   ]
 }
