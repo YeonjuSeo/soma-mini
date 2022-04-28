@@ -2,11 +2,12 @@ import React from "react";
 import styled from "@emotion/styled";
 import RoundProfile from "../atoms/RoundProfile";
 
-const Story = ({ id, url }) => {
+const Story = ({ id, url, onClick }) => {
   return (
     <Wrapper>
       <StoryStroke>
         <RoundProfile
+          onClick={onClick}
           url={url}
           w={"66px"}
           h={"66px"}
@@ -35,6 +36,7 @@ const StoryStroke = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `;
 const StoryId = styled.div`
   font-size: 12px;
