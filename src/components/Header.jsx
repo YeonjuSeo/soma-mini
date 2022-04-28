@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { useNavigate } from "react-router-dom";
 
 import { MdHomeFilled } from "react-icons/md";
 import { HiOutlinePaperAirplane, HiOutlineHeart } from "react-icons/hi";
@@ -8,10 +9,17 @@ import { ImCompass2 } from "react-icons/im";
 import ProfileImg from "../assets/Profile.jpeg";
 import RoundProfile from "../atoms/RoundProfile";
 const Header = ({ setModalOn }) => {
+  const navigate = useNavigate();
   return (
     <Wrapper>
       <ElementsWrapper>
-        <Logo>Somagram</Logo>
+        <Logo
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Somagram
+        </Logo>
         <StyledInput placeholder={"검색"} />
         <FuncsWrapper>
           <MdHomeFilled style={IconStyle} />
@@ -25,6 +33,9 @@ const Header = ({ setModalOn }) => {
           <ImCompass2 style={IconStyle} />
           <HiOutlineHeart style={IconStyle} />
           <RoundProfile
+            onClick={() => {
+              navigate("/profile");
+            }}
             alt={"Profile Img - Yawning Cat"}
             w={"24px"}
             h={"24px"}
@@ -47,6 +58,7 @@ const Wrapper = styled.div`
 `;
 const Logo = styled.div`
   font-weight: bold;
+  cursor: pointer;
 `;
 const StyledInput = styled.input`
   border: none;

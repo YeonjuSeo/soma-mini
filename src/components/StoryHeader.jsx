@@ -1,13 +1,26 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { useNavigate } from "react-router-dom";
 
 import { MdClose } from "react-icons/md";
 
 const StoryHeader = () => {
+  const navigate = useNavigate();
   return (
     <Wrapper>
-      <Logo>Somagram</Logo>
-      <MdClose style={IconStyle} />
+      <Logo
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        Somagram
+      </Logo>
+      <MdClose
+        onClick={() => {
+          navigate("/");
+        }}
+        style={IconStyle}
+      />
     </Wrapper>
   );
 };
@@ -22,8 +35,8 @@ const Wrapper = styled.div`
 `;
 const Logo = styled.div`
   font-weight: bold;
-  color: #FFFFFF;
-  cursor: default;
+  color: #ffffff;
+  cursor: cursor;
   user-select: none;
 `;
 const IconStyle = {
@@ -31,5 +44,5 @@ const IconStyle = {
   height: "40px",
   marginRight: "32px",
   cursor: "grab",
-  color: "#FFFFFF"
+  color: "#FFFFFF",
 };

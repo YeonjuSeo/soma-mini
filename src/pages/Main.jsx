@@ -12,21 +12,22 @@ import MainPost from "../organisms/MainPost";
 import data from "../assets/data.json";
 import Slider from "react-slick";
 import PostCreation from "./PostCreation";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
   const [modalOn, setModalOn] = useState(false);
   const [postData, setPostData] = useState(data);
+  const navigate = useNavigate();
 
-
-  function addPost(img,content) {
+  function addPost(img, content) {
     postData.post.unshift({
-      "id": "id1",
-      "profImg": "/assets/Profile4.jpeg",
-      "postImg": img,
-      "content": content,
-      "like": 0,
-      "commentNum": 0
-    })
+      id: "id1",
+      profImg: "/assets/Profile4.jpeg",
+      postImg: img,
+      content: content,
+      like: 0,
+      commentNum: 0,
+    });
   }
 
   // data = {
@@ -44,7 +45,13 @@ const Main = () => {
   console.log(postData);
   return (
     <Wrapper>
-      <>{modalOn ? <PostCreation addPost={addPost} setModalOn={setModalOn} /> : ""}</>
+      <>
+        {modalOn ? (
+          <PostCreation addPost={addPost} setModalOn={setModalOn} />
+        ) : (
+          ""
+        )}
+      </>
 
       <Header setModalOn={setModalOn} />
       <ContentWrapper>
@@ -56,7 +63,13 @@ const Main = () => {
             slidesToShow={7}
           >
             {data.story.map((el) => (
-              <Story id={el.id} url={el.url} />
+              <Story
+                onClick={() => {
+                  navigate("/stories");
+                }}
+                id={el.id}
+                url={el.url}
+              />
             ))}
           </Slider>
         </StoryWrapper>
