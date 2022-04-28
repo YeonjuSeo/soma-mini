@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import styled from "@emotion/styled";
 
-import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
-
+import LeftButton from "../components/StoryLeftButton";
+import RightButton from "../components/StoryRightButton";
 import StoryPostHeader from "../components/StoryPostHeader";
 import StoryPostFooter from "../components/StoryPostFooter";
 
@@ -24,7 +24,7 @@ const StoryPost = ({ id, profImg, postImg, time }) => {
 
   return (
     <Wrapper>
-      <AiFillLeftCircle style={IconStyle} />
+      <LeftButton onClick={null}/>
       <PostWrapper>
         <video ref={vidRef} height="800px" width="450px" autoPlay={true} style={PostVideoStyle}>
           <source src={postImg} type="video/mp4" />
@@ -46,7 +46,7 @@ const StoryPost = ({ id, profImg, postImg, time }) => {
           />
         </PostControlWrapper>
       </PostWrapper>
-      <AiFillRightCircle style={IconStyle} />
+      <RightButton onClick={null}/>
     </Wrapper>
   );
 };
@@ -60,13 +60,6 @@ const Wrapper = styled.div`
   justify-content: space-between;
   flex: 0 0 auto;
 `; // flex 0 0 auto로 크기 고정
-const IconStyle = {
-  width: "30px",
-  height: "30px",
-  cursor: "grab",
-  color: "#3A3A3A"
-  // TODO: StoryPost에 hover시 #BBBBBB로 애니메이션
-};
 const PostWrapper = styled.div`
   height: 800px;
   width: 450px;
