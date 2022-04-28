@@ -126,6 +126,7 @@ const PostHeaderId = styled.div`
   color: #262626;
   font-size: 14px;
   font-weight: 600;
+  margin-left: 8px;
 `;
 const PostImg = styled.img`
   width: 100%;
