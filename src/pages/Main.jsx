@@ -4,18 +4,49 @@
 // @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import Header from "../components/Header";
 import Story from "../components/Story";
 import MainPost from "../organisms/MainPost";
 import data from "../assets/data.json";
 import Slider from "react-slick";
+import PostCreation from "./PostCreation";
 
 const Main = () => {
+  const [modalOn, setModalOn] = useState(false);
+  const [postData, setPostData] = useState(data);
+
+
+  function addPost(img,content) {
+    postData.post.unshift({
+      "id": "id1",
+      "profImg": "/assets/Profile4.jpeg",
+      "postImg": img,
+      "content": content,
+      "like": 0,
+      "commentNum": 0
+    })
+  }
+
+  // data = {
+  //   ...postData,
+  //   post:postData.post.unshift({
+  //     "id": "id1",
+  //     "profImg": "/assets/Profile4.jpeg",
+  //     "postImg": "/assets/Post1.jpeg",
+  //     "content": "어쩌구저쩌구",
+  //     "like": 33,
+  //     "commentNum": 49
+  //   })
+  // }
+
+  console.log(postData);
   return (
     <Wrapper>
-      <Header />
+      <>{modalOn ? <PostCreation addPost={addPost} setModalOn={setModalOn} /> : ""}</>
+
+      <Header setModalOn={setModalOn} />
       <ContentWrapper>
         <StoryWrapper>
           <Slider
