@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 
+import LeftButton from "../components/StoryLeftButton";
+import RightButton from "../components/StoryRightButton";
 import StoryHeader from "../components/StoryHeader";
 import StoryMiniPost from "../organisms/StoryMiniPost";
 import StoryPost from "../organisms/StoryPost";
@@ -22,12 +24,14 @@ const Story = () => {
           miniPostImg = "/assets/Story/StoryMiniPost2.jpg"
           time = "21시간"
         />
+        <LeftButton onClick={null}/>
         <StoryPost
           id = "Profile3"
           profImg = "/assets/Story/StoryProfile3.png"
           postImg = "/assets/Story/StoryPost3.mp4"
           time = "22시간"
         />
+        <RightButton onClick={null}/>
         <StoryMiniPost
           id = "Profile4"
           profImg = "/assets/Story/StoryProfile4.png"

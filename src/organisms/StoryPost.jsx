@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import styled from "@emotion/styled";
 
-import LeftButton from "../components/StoryLeftButton";
-import RightButton from "../components/StoryRightButton";
 import StoryPostHeader from "../components/StoryPostHeader";
 import StoryPostFooter from "../components/StoryPostFooter";
 
@@ -24,29 +22,25 @@ const StoryPost = ({ id, profImg, postImg, time }) => {
 
   return (
     <Wrapper>
-      <LeftButton onClick={null}/>
+      <video ref={vidRef} height="800px" width="450px" autoPlay={true} style={PostStyle}>
+        <source src={postImg} type="video/mp4" />
+      </video>
       <PostWrapper>
-        <video ref={vidRef} height="800px" width="450px" autoPlay={true} style={PostVideoStyle}>
-          <source src={postImg} type="video/mp4" />
-        </video>
-        <PostControlWrapper>
-          <StoryPostHeader
-            id = {id}
-            profImg = {profImg}
-            time = {time}
-            videoControls = {{
-              play: playVideo,
-              pause: pauseVideo,
-              mute: muteVideo,
-              unmute: unmuteVideo
-            }}
-          />
-          <StoryPostFooter
-            id = {id}
-          />
-        </PostControlWrapper>
+        <StoryPostHeader
+          id = {id}
+          profImg = {profImg}
+          time = {time}
+          videoControls = {{
+            play: playVideo,
+            pause: pauseVideo,
+            mute: muteVideo,
+            unmute: unmuteVideo
+          }}
+        />
+        <StoryPostFooter
+          id = {id}
+        />
       </PostWrapper>
-      <RightButton onClick={null}/>
     </Wrapper>
   );
 };
@@ -54,25 +48,18 @@ export default StoryPost;
 
 const Wrapper = styled.div`
   height: 800px;
-  width: 550px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: 0 0 auto;
-`; // flex 0 0 auto로 크기 고정
-const PostWrapper = styled.div`
-  height: 800px;
   width: 450px;
   border-radius: 10px;
   position: relative;
-`;
-const PostVideoStyle = {
+  flex: 0 0 auto;
+`; // flex 0 0 auto로 크기 고정
+const PostStyle = {
   borderRadius: "10px",
   position: "relative",
   zIndex: 0,
   objectFit: "cover"
 };
-const PostControlWrapper = styled.div`
+const PostWrapper = styled.div`
   height: 800px;
   width: 450px;
   display: flex;
