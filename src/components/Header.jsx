@@ -16,11 +16,14 @@ const Header = ({ setModalOn }) => {
         <FuncsWrapper>
           <MdHomeFilled style={IconStyle} />
           <HiOutlinePaperAirplane style={IconStyle} />
-          <FiPlusSquare style={IconStyle} onClick={()=>{
-            setModalOn(true);
-          }}/>
+          <FiPlusSquare
+            style={IconStyle}
+            onClick={() => {
+              setModalOn(true);
+            }}
+          />
           <ImCompass2 style={IconStyle} />
-          <HiOutlineHeart style={IconStyle}  />
+          <HiOutlineHeart style={IconStyle} />
           <RoundProfile
             alt={"Profile Img - Yawning Cat"}
             w={"24px"}
