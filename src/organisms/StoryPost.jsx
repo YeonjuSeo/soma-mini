@@ -7,33 +7,23 @@ import StoryPostHeader from "../components/StoryPostHeader";
 import StoryPostFooter from "../components/StoryPostFooter";
 
 const StoryPost = ({ id, profImg, postImg, time }) => {
-  const PostWrapper = styled.div`
-    height: 800px;
-    width: 450px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-
-    background-image: url(${postImg});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  `;
-
   return (
     <Wrapper>
       <AiFillLeftCircle style={IconStyle} />
       <PostWrapper>
-        <StoryPostHeader
-          id = {id}
-          profImg = {profImg}
-          time = {time}
-        />
-        <StoryPostFooter
-          id = {id}
-        />
+        <video height="800px" width="450px" autoplay="" style={PostVideoStyle}>
+          <source src={postImg} type="video/mp4" />
+        </video>
+        <PostControlWrapper>
+          <StoryPostHeader
+            id = {id}
+            profImg = {profImg}
+            time = {time}
+          />
+          <StoryPostFooter
+            id = {id}
+          />
+        </PostControlWrapper>
       </PostWrapper>
       <AiFillRightCircle style={IconStyle} />
     </Wrapper>
@@ -56,3 +46,28 @@ const IconStyle = {
   color: "#3A3A3A"
   // TODO: StoryPost에 hover시 #BBBBBB로 애니메이션
 };
+const PostWrapper = styled.div`
+  height: 800px;
+  width: 450px;
+  border-radius: 10px;
+  position: relative;
+`;
+const PostVideoStyle = {
+  "border-radius": "10px",
+  position: "relative",
+  "z-index": 0,
+  "object-fit": "cover"
+};
+const PostControlWrapper = styled.div`
+  height: 800px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+`;

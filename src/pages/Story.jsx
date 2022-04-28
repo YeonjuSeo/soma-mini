@@ -11,27 +11,21 @@ const Story = () => {
       <StoryHeader />
       <ContentWrapper>
         <StoryMiniPost
-          id = {null}
-          profImg = {null}
-          miniPostImg = {null}
-          time = {null}
-        />
-        <StoryMiniPost
           id = "Profile1"
           profImg = "/assets/Story/StoryProfile1.png"
           miniPostImg = "/assets/Story/StoryMiniPost1.jpg"
           time = "20시간"
         />
-        <StoryPost
+        <StoryMiniPost
           id = "Profile2"
           profImg = "/assets/Story/StoryProfile2.png"
-          postImg = "/assets/Story/StoryPost2.gif"
+          miniPostImg = "/assets/Story/StoryMiniPost2.jpg"
           time = "21시간"
         />
-        <StoryMiniPost
+        <StoryPost
           id = "Profile3"
           profImg = "/assets/Story/StoryProfile3.png"
-          miniPostImg = "/assets/Story/StoryMiniPost3.jpg"
+          postImg = "/assets/Story/StoryPost3.mp4"
           time = "22시간"
         />
         <StoryMiniPost
@@ -39,6 +33,12 @@ const Story = () => {
           profImg = "/assets/Story/StoryProfile4.png"
           miniPostImg = "/assets/Story/StoryMiniPost4.jpg"
           time = "23시간"
+        />
+        <StoryMiniPost
+          id = {null}
+          profImg = {null}
+          miniPostImg = {null}
+          time = {null}
         />
       </ContentWrapper>
     </Wrapper>
