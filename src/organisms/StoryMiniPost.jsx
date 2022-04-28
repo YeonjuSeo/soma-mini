@@ -35,6 +35,12 @@ const StoryMiniPost = ({ id, profImg, miniPostImg, time }) => {
     return <EmptyWrapper />
   }
 };
+StoryMiniPost.defaultProps = {
+  id: null,
+  profImg: null,
+  miniPostImg: null,
+  time: null
+}
 export default StoryMiniPost;
 
 const IdFont = styled.div`

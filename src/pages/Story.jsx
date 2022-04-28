@@ -34,12 +34,7 @@ const Story = () => {
           miniPostImg = "/assets/Story/StoryMiniPost4.jpg"
           time = "23시간"
         />
-        <StoryMiniPost
-          id = {null}
-          profImg = {null}
-          miniPostImg = {null}
-          time = {null}
-        />
+        <StoryMiniPost />
       </ContentWrapper>
     </Wrapper>
   );
