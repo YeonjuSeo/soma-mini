@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
-
-// components
+import Header from "../components/Header";
+import ProfileImg from "../assets/Profile.jpeg";
 import RoundProfile from "../atoms/RoundProfile";
+import { FaRegSun } from "react-icons/fa";
+import { FaBorderAll } from "react-icons/fa";
+import data from "../assets/data.json";
 
 // react-icons
 import {
@@ -14,10 +17,10 @@ import { IoChatbubbleOutline } from "react-icons/io5";
 import { RiBookmarkLine, RiBookmarkFill } from "react-icons/ri";
 import { VscEllipsis } from "react-icons/vsc";
 import { BsEmojiSmile } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router";
 
 
-const MainPost = ({ id, profImg, postImg, content, like, commentNum }) => {
+const Post = ({ id, profImg, postImg, content, like, commentNum }) => {
   const [heart, setHeart] = useState(false);
   const [mark, setMark] = useState(false);
 
@@ -66,61 +69,60 @@ const MainPost = ({ id, profImg, postImg, content, like, commentNum }) => {
       </>
     );
   };
-  const navigate = useNavigate();
   return (
     <Wrapper>
-      <PostHeaderWrapper>
-        <PostHeaderProfileWrapper>
-          <RoundProfile
-            w={"32px"}
-            h={"32px"}
-            url={profImg}
-            css={"margin-right:14px"}
-          />
-          <PostHeaderId>{id}</PostHeaderId>
-        </PostHeaderProfileWrapper>
-        <VscEllipsis  /> 
-        
-      </PostHeaderWrapper>
-      <PostImg 
-        src={postImg} 
-        onClick={() => {
-              navigate("/indivPost",{state:{ 
-                id:id, 
-                profImg:profImg, 
-                postImg:postImg, 
-                content:content, 
-                like:like, 
-                commentNum:commentNum
-              }});
-        }}/>
-      <BottomWrapper>
-        <IconsWrapper>
-          {RenderHeartBubbleMsg()}
-          {RenderBookMark()}
-        </IconsWrapper>
-        <StrongContentTxt>좋아요 {heart ? like + 1 : like}개</StrongContentTxt>
-        <ContentWrapper>
-          <StrongContentTxt style={{ marginRight: "4px" }}>
-            {id}
-          </StrongContentTxt>
+      <PostImg src={postImg}/>
+      <ContentWrapper>
+        <PostHeaderWrapper>
+          <PostHeaderProfileWrapper>
+            <RoundProfile
+              w={"32px"}
+              h={"32px"}
+              url={profImg}
+              css={"margin-right:14px"}
+            />
+            <PostHeaderId>{id}</PostHeaderId>
+          </PostHeaderProfileWrapper>
+          <VscEllipsis  /> 
+          
+        </PostHeaderWrapper>
+        <PostRepliesWrapper>
+          <PostProfileWrapper>
+            <RoundProfile
+              w={"27px"}
+              h={"27px"}
+              url={profImg}
+              css={"margin-right:14px"}
+            />
+            <PostHeaderId>{id}</PostHeaderId>
+          </PostProfileWrapper>
           {content}
-        </ContentWrapper>
-        <div style={{ color: "#828282", cursor: "grab" }}>
-          댓글 {commentNum}개 모두 보기
-        </div>
-      </BottomWrapper>
-      <ReplyWrapper>
-        <BsEmojiSmile style={IconStyle} />
-        <ReplyInput placeholder="댓글 달기..." />
-        <ReplySubmitBtn>게시</ReplySubmitBtn>
-      </ReplyWrapper>
+          <div style={{ color: "#828282", cursor: "grab" }}>
+            댓글 {commentNum}개 모두 보기
+          </div>
+        </PostRepliesWrapper>
+        
+        <BottomWrapper>
+          <IconsWrapper>
+            {RenderHeartBubbleMsg()}
+            {RenderBookMark()}
+          </IconsWrapper>
+          <StrongContentTxt>좋아요 {heart ? like + 1 : like}개</StrongContentTxt>
+          
+        </BottomWrapper>
+        <ReplyWrapper>
+          <BsEmojiSmile style={IconStyle} />
+          <ReplyInput placeholder="댓글 달기..." />
+          <ReplySubmitBtn>게시</ReplySubmitBtn>
+        </ReplyWrapper>
+      </ContentWrapper>
     </Wrapper>
   );
 };
-export default MainPost;
+export default Post;
 
 const Wrapper = styled.div`
+  display:flex;
   background-color: white;
   border: 1px solid rgba(239, 239, 239, 1);
   margin-bottom: 24px;
@@ -143,7 +145,7 @@ const PostHeaderId = styled.div`
   margin-left: 8px;
 `;
 const PostImg = styled.img`
-  width: 100%;
+  width: 614px;
   height: auto;
 
   max-height: 614px;
@@ -154,6 +156,16 @@ const IconStyle = {
   marginRight: "8px",
   cursor: "grab",
 };
+const PostRepliesWrapper = styled.div`
+  padding: 6px 16px 350px 26px;
+  font-size: 14px;
+  color: #262626;
+`;
+const PostProfileWrapper = styled.div`
+  display: flex;
+  justify-content: left;
+  align-items: center;
+`;
 const BottomWrapper = styled.div`
   padding: 6px 16px 16px 16px;
   font-size: 14px;
@@ -165,7 +177,7 @@ const IconsWrapper = styled.div`
   padding-bottom: 8px;
 `;
 const ContentWrapper = styled.div`
-  display: flex;
+  width:350px;
 `;
 const StrongContentTxt = styled.div`
   font-weight: 600;
@@ -189,6 +201,7 @@ const ReplyInput = styled.input`
 `;
 const ReplySubmitBtn = styled.button`
   border: none;
+  width: 40px;
   background: transparent;
   color: #0095f6;
   font-weight: 600;
