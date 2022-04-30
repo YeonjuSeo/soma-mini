@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "@emotion/styled";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import data from "../assets/data.json";
 
@@ -11,7 +11,7 @@ import StoryMiniPost from "../organisms/StoryMiniPost";
 import StoryPost from "../organisms/StoryPost";
 
 const Story = () => {
-  const [index, setIndex] = useState(0);
+  const {index} = useParams();
   const navigate = useNavigate();
 
   const generateStoryPosts = (postDatas) => {
@@ -21,11 +21,11 @@ const Story = () => {
 
     // 오른쪽 버튼은 마지막 동영상이면 나가기 버튼
     const handleRightButton = () => {
-      if (index === postDatas.length - 1) {
+      if (index == postDatas.length - 1) {
         navigate("/");
       }
       else {
-        setIndex(index + 1);
+        navigate(`/stories/${Number(index) + 1}`);
       }
     };
 
@@ -46,11 +46,11 @@ const Story = () => {
     }
 
     // 가운데 포스트
-    if (index === 0) {
+    if (index == 0) {
       postElements.push(<LeftButton onClick={null} hidden/>);
     }
     else {
-      postElements.push(<LeftButton onClick={() => {setIndex(index - 1)}}/>);
+      postElements.push(<LeftButton onClick={() => {navigate(`/stories/${Number(index) - 1}`)}}/>);
     }
     postElements.push(<StoryPost
       key = {postDatas[index].id}

@@ -8,7 +8,7 @@ const Root = () => {
     <>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/stories" element={<Story />} />
+        <Route path="/stories/:index" element={<Story />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </>

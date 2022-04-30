@@ -62,10 +62,10 @@ const Main = () => {
             slidesToScroll={7}
             slidesToShow={7}
           >
-            {data.story.map((el) => (
+            {data.story.map((el, index) => (
               <Story
                 onClick={() => {
-                  navigate("/stories");
+                  navigate(`/stories/${index}`);
                 }}
                 id={el.id}
                 url={el.url}
