@@ -21,7 +21,7 @@ const Main = () => {
 
   function addPost(img, content) {
     postData.post.unshift({
-      id: "id1",
+      id: "_cat",
       profImg: "/assets/Profile4.jpeg",
       postImg: img,
       content: content,
