@@ -23,28 +23,44 @@
   ],
   "post": [
     {
+      "id": "poo2ul",
+      "profImg": "/assets/Profile10.jpeg",
+      "postImg": "/assets/dog_3.jpg",
+      "content": "3년만에 동기들이랑 스튜디오 촬영 ㅎㅎ \n 우정 변치말자 ㅠㅠ",
+      "like": 313,
+      "commentNum": 49
+    },
+    {
+      "id": "sleepy_.cat",
+      "profImg": "/assets/Profile7.jpeg",
+      "postImg": "/assets/cat_2.jpg",
+      "content": "심심해~",
+      "like": 3363,
+      "commentNum": 459
+    },
+    {
       "id": "catt_cutee",
       "profImg": "/assets/Profile4.jpeg",
-      "postImg": "/assets/Post1.jpeg",
-      "content": "어쩌구저쩌구",
+      "postImg": "/assets/cat1.jpg",
+      "content": "시험 끝났다옹",
       "like": 33,
       "commentNum": 49
     },
     {
       "id": "ohoio_km",
       "profImg": "/assets/Profile5.jpeg",
-      "postImg": "/assets/Post2.jpeg",
-      "content": "내가 좋아하는 놈!!",
+      "postImg": "/assets/dog1.jpg",
+      "content": "거울샷 #인생샷 #강아지 #불금",
       "like": 343,
       "commentNum": 49
     },
     {
       "id": "jaewook_11",
       "profImg": "/assets/Profile6.jpeg",
-      "postImg": "/assets/Post3.jpeg",
-      "content": "어쩌구저쩌구",
-      "like": 33,
-      "commentNum": 49
+      "postImg": "/assets/cat2.jpg",
+      "content": "찐친들과 한컷.",
+      "like": 2,
+      "commentNum": 1
     }
   ]
 }
