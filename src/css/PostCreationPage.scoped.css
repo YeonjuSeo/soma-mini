@@ -31,6 +31,20 @@
   /* padding: 15px; */
 }
 
+.backBnt {
+  width: 17px;
+  height: 17px;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.backBnt:hover {
+  background-color: #f0f0f0;
+}
+
 .modalTitle {
   font-size: 18px;
   font-weight: bold;

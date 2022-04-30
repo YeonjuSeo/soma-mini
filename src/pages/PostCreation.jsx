@@ -19,6 +19,13 @@ const PostCreation = ({ setModalOn, addPost }) => {
     <div className="modal">
       <div className="bg" />
       <div className="modalBox">
+        <img
+          className="backBnt"
+          src="back.png"
+          onClick={() => {
+            setModalOn(false);
+          }}
+        />
         <p className="modalTitle">새 게시물 만들기</p>
         <div className="line" />
         <div className="formBox">
@@ -40,6 +47,11 @@ const PostCreation = ({ setModalOn, addPost }) => {
             <button
               className="creationButton"
               onClick={() => {
+                if (previewURL === "add.png") {
+                  alert("이미지를 업로드 해주세요!");
+                  return;
+                }
+
                 setModalOn(false);
                 addPost(previewURL, text);
               }}
