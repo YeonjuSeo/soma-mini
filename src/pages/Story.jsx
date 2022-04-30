@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
+import { useNavigate } from "react-router-dom";
 
 import data from "../assets/data.json";
 
@@ -11,11 +12,22 @@ import StoryPost from "../organisms/StoryPost";
 
 const Story = () => {
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
 
   const generateStoryPosts = (postDatas) => {
     let postElements = [];
     let postLeftCnt = index;
     let postRightCnt = postDatas.length - index - 1;
+
+    // 오른쪽 버튼은 마지막 동영상이면 나가기 버튼
+    const handleRightButton = () => {
+      if (index === postDatas.length - 1) {
+        navigate("/");
+      }
+      else {
+        setIndex(index + 1);
+      }
+    };
 
     // 대칭 맞추기용 더미
     for (let i = postLeftCnt; i < postRightCnt; ++i) {
@@ -46,13 +58,9 @@ const Story = () => {
       profImg = {postDatas[index].profImg}
       postImg = {postDatas[index].postImg}
       time = {postDatas[index].time}
+      onVideoEnded = {handleRightButton}
     />);
-    if (index === postDatas.length - 1) {
-      postElements.push(<RightButton onClick={null} hidden/>);
-    }
-    else {
-      postElements.push(<RightButton onClick={() => {setIndex(index + 1)}}/>);
-    }
+    postElements.push(<RightButton onClick={handleRightButton}/>);
 
     // 오른쪽 애들
     for (let i = index; ++i < postDatas.length;) {
