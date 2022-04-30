@@ -1,15 +1,9 @@
 {
   "story": [
-    {
-      "id": "byuk_mm",
-      "url": "/assets/animal_profile7.jpeg"
-    },
-    { "id": "yeonjuice_2000", "url": "/assets/animal_profile1.jpeg" },
-    { "id": "lovely_yeon", "url": "/assets/animal_profile2.jpeg" },
-    { "id": "jaewon_1011", "url": "/assets/animal_profile3.jpeg" },
-    { "id": "dong_love_offcial", "url": "/assets/animal_profile4.jpeg" },
-    { "id": "catt_cutee", "url": "/assets/animal_profile5.jpeg" },
-    { "id": "nayun_kk", "url": "/assets/animal_profile6.jpeg" }
+    { "id": "id1", "url": "/assets/Story/StoryProfile1.png" },
+    { "id": "id2", "url": "/assets/Story/StoryProfile2.png" },
+    { "id": "id3", "url": "/assets/Story/StoryProfile3.png" },
+    { "id": "id4", "url": "/assets/Story/StoryProfile4.png" }
   ],
   "profile": [
     { "id": "lovely_yeon", "url": "/assets/dog_1.jpg" },
