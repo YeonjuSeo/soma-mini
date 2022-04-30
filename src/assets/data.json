@@ -1,15 +1,10 @@
 {
   "story": [
-    {
-      "id": "byuk_mm",
-      "url": "/assets/animal_profile7.jpeg"
-    },
     { "id": "yeonjuice_2000", "url": "/assets/animal_profile1.jpeg" },
     { "id": "lovely_yeon", "url": "/assets/animal_profile2.jpeg" },
     { "id": "jaewon_1011", "url": "/assets/animal_profile3.jpeg" },
     { "id": "dong_love_offcial", "url": "/assets/animal_profile4.jpeg" },
-    { "id": "catt_cutee", "url": "/assets/animal_profile5.jpeg" },
-    { "id": "nayun_kk", "url": "/assets/animal_profile6.jpeg" }
+    { "id": "byuk_mm", "url": "/assets/animal_profile5.jpeg" }
   ],
   "profile": [
     { "id": "lovely_yeon", "url": "/assets/dog_1.jpg" },
@@ -65,32 +60,39 @@
   ],
   "storyPost": [
     {
-      "id": "id1",
-      "profImg": "/assets/Story/StoryProfile1.png",
+      "id": "yeonjuice_2000",
+      "profImg": "/assets/animal_profile1.jpeg",
       "miniPostImg": "/assets/Story/StoryMiniPost1.jpg",
       "postImg": "/assets/Story/StoryPost1.mp4",
-      "time": "20시간"
+      "time": "19시간"
     },
     {
-      "id": "id2",
-      "profImg": "/assets/Story/StoryProfile2.png",
+      "id": "lovely_yeon",
+      "profImg": "/assets/animal_profile2.jpeg",
       "miniPostImg": "/assets/Story/StoryMiniPost2.jpg",
       "postImg": "/assets/Story/StoryPost2.mp4",
-      "time": "21시간"
+      "time": "23시간"
     },
     {
-      "id": "id3",
-      "profImg": "/assets/Story/StoryProfile3.png",
+      "id": "jaewon_1011",
+      "profImg": "/assets/animal_profile3.jpeg",
       "miniPostImg": "/assets/Story/StoryMiniPost3.jpg",
       "postImg": "/assets/Story/StoryPost3.mp4",
       "time": "22시간"
     },
     {
-      "id": "id4",
-      "profImg": "/assets/Story/StoryProfile4.png",
+      "id": "dong_love_offcial",
+      "profImg": "/assets/animal_profile4.jpeg",
       "miniPostImg": "/assets/Story/StoryMiniPost4.jpg",
       "postImg": "/assets/Story/StoryPost4.mp4",
-      "time": "23시간"
+      "time": "20시간"
+    },
+    {
+      "id": "byuk_mm",
+      "profImg": "/assets/animal_profile5.jpeg",
+      "miniPostImg": "/assets/Story/StoryMiniPost5.jpg",
+      "postImg": "/assets/Story/StoryPost5.mp4",
+      "time": "21시간"
     }
   ]
 }
