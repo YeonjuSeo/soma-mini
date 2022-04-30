@@ -1,120 +1,117 @@
-
-.modal{
-    position:fixed;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 989;
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 989;
 }
 
-.modal .bg{
-    
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+.modal .bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.modalBox{
-    position: absolute;
-    background-color: white;
-    text-align: center;
-    border-radius: 20px;
-    width: 50vw;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
+.modalBox {
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  border-radius: 20px;
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
 
-    max-width: 600px;
-    min-width: 400px;
-    /* padding: 15px; */
+  max-width: 600px;
+  min-width: 400px;
+  /* padding: 15px; */
 }
 
-.modalTitle{
-
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
+.modalTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
 }
 
-.formBox{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
+.formBox {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  overflow: hidden;
 }
 
-.imageForm{
-    width: 80%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.imageForm {
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
-.input-file-button{
-    cursor: pointer;
-    transition: all 0.2s linear;
+.input-file-button {
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 
-.input-file-button:hover{
-
+.input-file-button:hover {
 }
 
-.line{
-    width: 100%;
-    height: 2px;
-    border-radius: 5px;
-    background-color: #f0f0f0;
+.line {
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
 }
 
-.line2{
-    width: 2px;
-    height: 100%;
+.line2 {
+  width: 2px;
+  height: 100%;
 
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
-.textForm{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+.textForm {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-textarea{
-    background-color: white;
-    border: none;
-    text-align: start;
-    height: 100%;
-    resize: none;
-    padding: 10px;
+textarea {
+  background-color: white;
+  border: none;
+  text-align: start;
+  height: 100%;
+  resize: none;
+  padding: 10px;
 }
 
-.preview{
-    width: 80%;
+.preview {
+  width: 80%;
 }
 
-textarea:focus{
-    outline: none;
-    text-align:start;
-
+textarea:focus {
+  outline: none;
+  text-align: start;
 }
 
-#fileInput{
-    display: none;
+#fileInput {
+  display: none;
 }
 
-.creationButton{
-
-    width: 100%;
-    background-color: white;
-    border:none;
-    color: black;
-    font-size: 12px;
-    padding : 10px 20px 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
+.creationButton {
+  width: 100%;
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 12px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
 }
