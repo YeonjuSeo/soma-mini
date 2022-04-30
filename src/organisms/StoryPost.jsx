@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import StoryPostHeader from "../components/StoryPostHeader";
 import StoryPostFooter from "../components/StoryPostFooter";
 
-const StoryPost = ({ id, profImg, postImg, time }) => {
+const StoryPost = ({ id, profImg, postImg, time, onVideoEnded }) => {
   const vidRef = useRef(null);
 
   const playVideo = () => {
@@ -22,7 +22,7 @@ const StoryPost = ({ id, profImg, postImg, time }) => {
 
   return (
     <Wrapper>
-      <video ref={vidRef} height="800px" width="450px" autoPlay={true} style={PostStyle}>
+      <video ref={vidRef} height="800px" width="450px" autoPlay={true} style={PostStyle} onEnded={onVideoEnded}>
         <source src={postImg} type="video/mp4" />
       </video>
       <PostWrapper>
