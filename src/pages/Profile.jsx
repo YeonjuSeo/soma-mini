@@ -34,9 +34,9 @@ const Profile = () => {
           </ContentWrapper>
 
           <ContentWrapper>
-            <span>게시물 0</span>
-            <span>팔로워 0</span>
-            <span>팔로우 0</span>
+            <span>게시물 8</span>
+            <span>팔로워 11</span>
+            <span>팔로우 126</span>
           </ContentWrapper>
           <ContentWrapper>
             <NameSpan>고양이</NameSpan>
